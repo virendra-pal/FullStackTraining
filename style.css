@@ -1,0 +1,14 @@
+/* div p {
+    background-color: red;
+    color: white;
+} */
+
+/* div+p {
+    background-color: red;
+    color: white;
+} */
+
+div~p {
+    background-color: red;
+    color: white;
+}
