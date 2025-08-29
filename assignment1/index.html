@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Layout</title>
+</head>
+<body style="margin:0; height:100vh;">
+
+  <table border="1" cellspacing="0" cellpadding="8" bgcolor="black" width="100%" style="height:100vh;">
+    <!-- Header row -->
+    <tr style="height:5%;">
+      <td><font color="white">Home</font></td>
+      <td><font color="white">Training</font></td>
+      <td><font color="white">Development</font></td>
+      <td><font color="white">About Us</font></td>
+      <td><font color="white">Content</font></td>
+    </tr>
+
+    <!-- Content rows -->
+     git branch -M main
+
+     
+    <tr>
+      <td align="center"><font color="white"><a href="#" onclick="showContent('html')" style="color:white; text-decoration:none;">HTML</a></font></td>
+      <td rowspan="4" colspan="4" align="center">
+        <div id="contentArea" style="width:100%; height:100%;">
+          <img id="mainImage" src="image.png" alt="Demo Image" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+      </td>
+    </tr>
+    <tr><td align="center"><font color="white"><a href="#" onclick="showContent('css')" style="color:white; text-decoration:none;">CSS</a></font></td></tr>
+    <tr><td align="center"><font color="white"><a href="#" onclick="showContent('js')" style="color:white; text-decoration:none;">JavaScript</a></font></td></tr>
+    <tr><td align="center"><font color="white"><a href="#" onclick="showContent('react')" style="color:white; text-decoration:none;">React</a></font></td></tr>
+
+    <!-- Footer row -->
+    <tr style="height:5%;">
+      <td colspan="5" align="center"><font color="white">© Copyright</font></td>
+    </tr>
+  </table>
+
+  <!-- JavaScript -->
+  <script>
+    function showContent(topic) {
+      var contentArea = document.getElementById("contentArea");
+      var text = "";
+
+      if (topic === "html") {
+        text = "<h1 style='color:white;'>HTML Content</h1><p style='color:white;'>HTML is the structure of web pages.</p>";
+      } else if (topic === "css") {
+        text = "<h1 style='color:white;'>CSS Content</h1><p style='color:white;'>CSS styles the structure of web pages.</p>";
+      } else if (topic === "js") {
+        text = "<h1 style='color:white;'>JavaScript Content</h1><p style='color:white;'>JavaScript makes web pages interactive.</p>";
+      } else if (topic === "react") {
+        text = "<h1 style='color:white;'>React Content</h1><p style='color:white;'>React is a JavaScript library for building UIs.</p>";
+      }
+
+      contentArea.innerHTML = text;
+    }
+  </script>
+
+</body>
+</html>
